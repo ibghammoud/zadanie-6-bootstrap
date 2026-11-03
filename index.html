@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Задание 6 — Компоненты Bootstrap</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body class="bg-white">
+
+    <main class="container py-4">
+
+        <h1 class="h3 mb-4">
+            Формы и компоненты Bootstrap
+        </h1>
+
+        <!-- 1. Горизонтальная форма -->
+
+        <section class="mb-5"
+                 aria-labelledby="horizontal-title">
+
+            <h2 id="horizontal-title"
+                class="h5 mb-3">
+                Горизонтальная форма
+            </h2>
+
+            <form class="demo-form row g-2 align-items-center"
+                  data-feedback="inline-alert">
+
+                <div class="col-auto">
+                    <label for="inline-email"
+                           class="col-form-label fw-semibold">
+                        Email
+                    </label>
+                </div>
+
+                <div class="col-12 col-sm-4 col-lg-3">
+                    <input
+                        type="email"
+                        id="inline-email"
+                        class="form-control"
+                        placeholder="Введите email"
+                        pattern=".+@.+\..+"
+                        required>
+                </div>
+
+                <div class="col-auto">
+                    <label for="inline-password"
+                           class="col-form-label fw-semibold">
+                        Пароль
+                    </label>
+                </div>
+
+                <div class="col-12 col-sm-4 col-lg-3">
+                    <input
+                        type="password"
+                        id="inline-password"
+                        class="form-control"
+                        placeholder="Пароль"
+                        autocomplete="off"
+                        required>
+                </div>
+
+                <div class="col-auto">
+                    <button type="submit"
+                            class="btn btn-success">
+                        Войти
+                    </button>
+                </div>
+
+            </form>
+
+            <div id="inline-alert"
+                 class="alert alert-success d-none mt-3"
+                 role="status">
+                Проверка пройдена.
+                Данные не отправляются на сервер.
+            </div>
+
+        </section>
+
+        <!-- 2. Вертикальная форма -->
+
+        <section class="mb-5"
+                 aria-labelledby="vertical-title">
+
+            <h2 id="vertical-title"
+                class="h5 mb-3">
+                Вертикальная форма
+            </h2>
+
+            <div class="row">
+
+                <div class="col-12 col-md-8 col-lg-5">
+
+                    <form class="demo-form border rounded p-3"
+                          data-feedback="vertical-alert">
+
+                        <div class="mb-3">
+
+                            <label for="form-email"
+                                   class="form-label fw-semibold">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="form-email"
+                                class="form-control"
+                                placeholder="Введите email"
+                                pattern=".+@.+\..+"
+                                aria-describedby="email-help"
+                                required>
+
+                            <div id="email-help"
+                                 class="form-text">
+                                Пример строки с подсказкой.
+                                Введите корректный адрес электронной почты.
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label for="form-password"
+                                   class="form-label fw-semibold">
+                                Пароль
+                            </label>
+
+                            <input
+                                type="password"
+                                id="form-password"
+                                class="form-control"
+                                placeholder="Пароль"
+                                autocomplete="off"
+                                required>
+
+                        </div>
+
+                        <div class="form-check mb-3">
+
+                            <input
+                                type="checkbox"
+                                id="form-check"
+                                class="form-check-input">
+
+                            <label for="form-check"
+                                   class="form-check-label">
+                                Чекбокс
+                            </label>
+
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-success">
+                            Войти
+                        </button>
+
+                        <div id="vertical-alert"
+                             class="alert alert-success d-none mt-3"
+                             role="status">
+                            Проверка пройдена.
+                            Данные не отправляются на сервер.
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 3. Стили кнопок -->
+
+        <section class="mb-5"
+                 aria-labelledby="buttons-title">
+
+            <h2 id="buttons-title"
+                class="h5 mb-3">
+                Стили кнопок
+            </h2>
+
+            <div class="d-flex flex-wrap gap-2">
+
+                <button type="button"
+                        class="btn btn-secondary">
+                    Стандартная
+                </button>
+
+                <button type="button"
+                        class="btn btn-primary">
+                    Основная
+                </button>
+
+                <button type="button"
+                        class="btn btn-success">
+                    Подтвердить
+                </button>
+
+                <button type="button"
+                        class="btn btn-info">
+                    Уведомление
+                </button>
+
+                <button type="button"
+                        class="btn btn-warning">
+                    Внимание
+                </button>
+
+                <button type="button"
+                        class="btn btn-danger">
+                    Отмена
+                </button>
+
+                <a href="cards.html"
+                   class="btn btn-link">
+                    Ссылка
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- 4. Таблица 1 -->
+
+        <section class="mb-4"
+                 aria-labelledby="table-one-title">
+
+            <h2 id="table-one-title"
+                class="h5 mb-3">
+                Таблица 1 — Полосатая
+            </h2>
+
+            <div class="table-responsive">
+
+                <table class="table table-striped table-sm w-auto">
+
+                    <tbody>
+
+                        <tr>
+                            <td>Иван</td>
+                            <td>Николайчук</td>
+                            <td>ivan@example.com</td>
+                        </tr>
+
+                        <tr>
+                            <td>Мария</td>
+                            <td>Иванова</td>
+                            <td>mary@example.com</td>
+                        </tr>
+
+                        <tr>
+                            <td>Юлия</td>
+                            <td>Петренко</td>
+                            <td>julia@example.com</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- 5. Таблица 2 -->
+
+        <section class="mb-4"
+                 aria-labelledby="table-two-title">
+
+            <h2 id="table-two-title"
+                class="h5 mb-3">
+                Таблица 2 — С границами
+            </h2>
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered w-auto">
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Имя</th>
+                            <th scope="col">Фамилия</th>
+                            <th scope="col">Почта</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Иван</td>
+                            <td>Николайчук</td>
+                            <td>ivan@example.com</td>
+                        </tr>
+
+                        <tr>
+                            <td>Мария</td>
+                            <td>Иванова</td>
+                            <td>mary@example.com</td>
+                        </tr>
+
+                        <tr>
+                            <td>Юлия</td>
+                            <td>Петренко</td>
+                            <td>julia@example.com</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- 6. Таблица 3 -->
+
+        <section class="mb-5"
+                 aria-labelledby="table-three-title">
+
+            <h2 id="table-three-title"
+                class="h5 mb-3">
+                Таблица 3 — Контекстные цвета
+            </h2>
+
+            <div class="table-responsive">
+
+                <table class="table table-hover">
+
+                    <thead>
+
+                        <tr>
+                            <th scope="col" class="table-active">
+                                Имя (active)
+                            </th>
+
+                            <th scope="col" class="table-success">
+                                Фамилия (success)
+                            </th>
+
+                            <th scope="col" class="table-info">
+                                Почта (info)
+                            </th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td class="table-warning">
+                                Иван (warning)
+                            </td>
+
+                            <td>Николайчук</td>
+
+                            <td class="table-danger">
+                                ivan@example.com (danger)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Мария</td>
+                            <td>Иванова</td>
+                            <td>mary@example.com</td>
+                        </tr>
+
+                        <tr>
+                            <td>Юлия</td>
+
+                            <td class="table-active">
+                                Петренко (active)
+                            </td>
+
+                            <td>julia@example.com</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Переход на вторую страницу -->
+
+        <div class="border-top pt-4">
+
+            <p class="text-secondary mb-3">
+                Вторая часть задания —
+                карточки и модальное окно Bootstrap.
+            </p>
+
+            <a href="cards.html"
+               class="btn btn-primary">
+                Перейти к карточкам
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+</html>

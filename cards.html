@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Задание 6 — Карточки Bootstrap</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container py-5">
+
+        <div class="d-flex justify-content-between
+                    align-items-center flex-wrap gap-3 mb-4">
+
+            <h1 class="h3 mb-0">
+                Карточки Bootstrap
+            </h1>
+
+            <a href="index.html"
+               class="btn btn-outline-secondary">
+                Вернуться к формам
+            </a>
+
+        </div>
+
+        <!-- Карточки на цветном фоне -->
+
+        <section class="bg-danger-subtle rounded-4 p-3 p-md-5"
+                 aria-label="Галерея карточек">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <!-- Первая карточка -->
+
+                <div class="col">
+
+                    <article class="card h-100 shadow-sm">
+
+                        <img
+                            src="img/cat-1.jpg"
+                            class="card-img-top img-fluid"
+                            alt="Три маленьких котёнка"
+                            width="1200"
+                            height="900">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h2 class="card-title h5">
+                                Название карточки
+                            </h2>
+
+                            <p class="card-text">
+                                Маленькие котята любят играть,
+                                исследовать окружающий мир
+                                и проводить время вместе.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary mt-auto
+                                       align-self-start"
+                                data-bs-toggle="modal"
+                                data-bs-target="#cat-modal">
+
+                                Подробнее
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- Вторая карточка -->
+
+                <div class="col">
+
+                    <article class="card h-100 shadow-sm">
+
+                        <img
+                            src="img/cat-2.jpg"
+                            class="card-img-top img-fluid"
+                            alt="Кошка с котёнком"
+                            width="1200"
+                            height="900">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h2 class="card-title h5">
+                                Название карточки
+                            </h2>
+
+                            <p class="card-text">
+                                Кошки заботятся о своих
+                                котятах и помогают им
+                                познакомиться с окружающим миром.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary mt-auto
+                                       align-self-start"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#second-details"
+                                aria-expanded="false"
+                                aria-controls="second-details">
+
+                                Подробнее
+
+                            </button>
+
+                            <div class="collapse mt-3"
+                                 id="second-details">
+
+                                <div class="alert alert-light border mb-0">
+                                    Забота о котятах —
+                                    важная часть поведения
+                                    домашних кошек.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- Третья карточка -->
+
+                <div class="col">
+
+                    <article class="card h-100 shadow-sm">
+
+                        <img
+                            src="img/cat-3.jpg"
+                            class="card-img-top img-fluid"
+                            alt="Спящий котёнок"
+                            width="1200"
+                            height="900">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h2 class="card-title h5">
+                                Название карточки
+                            </h2>
+
+                            <p class="card-text">
+                                Котята проводят много времени
+                                во сне, восстанавливая силы
+                                для новых приключений.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary mt-auto
+                                       align-self-start"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#third-details"
+                                aria-expanded="false"
+                                aria-controls="third-details">
+
+                                Подробнее
+
+                            </button>
+
+                            <div class="collapse mt-3"
+                                 id="third-details">
+
+                                <div class="alert alert-light border mb-0">
+                                    Котятам необходимы
+                                    отдых, комфорт и безопасное
+                                    место для сна.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <p class="small text-secondary mt-4">
+            Фотографии: Wikimedia Commons,
+            свободные изображения.
+        </p>
+
+    </main>
+
+    <!-- Модальное окно первой карточки -->
+
+    <div class="modal fade"
+         id="cat-modal"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="cat-modal-title"
+         aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <!-- Заголовок окна -->
+
+                <div class="modal-header">
+
+                    <h2 class="modal-title fs-5"
+                        id="cat-modal-title">
+                        Форма обратной связи
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Закрыть">
+                    </button>
+
+                </div>
+
+                <!-- Содержимое окна -->
+
+                <div class="modal-body">
+
+                    <form id="modal-form"
+                          class="demo-form"
+                          data-feedback="modal-alert">
+
+                        <div class="mb-3">
+
+                            <label for="modal-email"
+                                   class="form-label">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="modal-email"
+                                class="form-control"
+                                placeholder="Введите email"
+                                pattern=".+@.+\..+"
+                                aria-describedby="modal-email-help"
+                                required>
+
+                            <div id="modal-email-help"
+                                 class="form-text">
+                                Мы никогда не передадим
+                                вашу почту третьим лицам.
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label for="modal-password"
+                                   class="form-label">
+                                Пароль
+                            </label>
+
+                            <input
+                                type="password"
+                                id="modal-password"
+                                class="form-control"
+                                placeholder="Введите пароль"
+                                autocomplete="off"
+                                required>
+
+                        </div>
+
+                        <div class="form-check">
+
+                            <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="modal-check">
+
+                            <label for="modal-check"
+                                   class="form-check-label">
+                                Чекбокс
+                            </label>
+
+                        </div>
+
+                        <div id="modal-alert"
+                             class="alert alert-success d-none mt-3"
+                             role="status">
+                            Проверка выполнена.
+                            Данные не сохраняются.
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- Кнопки окна -->
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                        Закрыть
+                    </button>
+
+                    <button
+                        type="submit"
+                        form="modal-form"
+                        class="btn btn-primary">
+                        Сохранить
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JavaScript Bundle -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+</html>
